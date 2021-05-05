@@ -42,8 +42,7 @@ class AddUserFormView(generic.FormView):
 
             user.save()
             context = {
-                'username': user.username,
-                'email': user.email,
+                'user': user,
             }
             return render(
                 template_name=self.template_name_post,
